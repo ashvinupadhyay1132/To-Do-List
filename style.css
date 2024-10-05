@@ -1,0 +1,119 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #ff6b6b, #f6d365, #ff6b6b);
+    margin: 0;
+}
+
+.todo-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #333;
+    background: -webkit-linear-gradient(45deg, #f093fb, #f5576c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#task-input {
+    width: calc(100% - 22px);
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+#add-task {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    font-size: 16px;
+}
+
+#add-task:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+#task-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    font-size: 16px;
+    color: #333;
+    transition: background-color 0.3s;
+}
+
+.task:nth-child(odd) {
+    background-color: #f6f6f6;
+}
+
+.task.completed {
+    text-decoration: line-through;
+    color: #aaa;
+    animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+.task button {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.task button.complete-btn {
+    background-color: #28a745;
+}
+
+.task button.delete-btn {
+    background-color: #dc3545;
+}
+
+.task button.complete-btn:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.task button.delete-btn:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+}
+
+/* Task hover effect */
+.task:hover {
+    background-color: #f1f1f1;
+}
