@@ -113,7 +113,6 @@ h1 {
     transform: translateY(-2px);
 }
 
-/* Task hover effect */
 .task:hover {
     background-color: #f1f1f1;
 }
